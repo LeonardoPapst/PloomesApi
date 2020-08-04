@@ -7,18 +7,15 @@ namespace WebApi.Models
 {
     public class Login
     {
-        public string Usuario { get; set; }
-
-        public string Password { get; set; }
 
         public string Nome { get; set; }
 
+        public int ID { get; set; }
 
-        public Login(string user, string pass, string nome )
+        public Login(string nome, int id)
         {
-            this.Usuario = user;
-            this.Password = pass;
             this.Nome = nome;
+            this.ID = id;
         }
     }
 }

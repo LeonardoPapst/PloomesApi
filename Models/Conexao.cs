@@ -9,19 +9,19 @@ namespace WebApi.Models
 {
     public class Conexao
     {
-        protected SqlConnection Con;    
-        protected SqlCommand Cmd;       
-        protected SqlDataReader Dr;     
-        protected SqlTransaction Tr;    
+        public SqlConnection Con;
+        public SqlCommand Cmd;
+        public SqlDataReader Dr;
+        public SqlTransaction Tr;    
 
         
-        protected void OpenConnection() 
+        public void OpenConnection() 
         {
-            Con = new SqlConnection("Server=tcp:dbploomes.database.windows.net,1433;Initial Catalog=PloomesAPI;Persist Security Info=False;User ID=adminPloomes;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            Con = new SqlConnection("Server=tcp:dbploomes.database.windows.net,1433;Initial Catalog=PloomesAPI;Persist Security Info=False;User ID=adminPloomes;Password=Ploomes123;MultipleActiveResultSets=True;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             Con.Open(); 
         }
 
-        protected void CloseConnection() 
+        public void CloseConnection() 
         {
             Con.Close(); 
         }
